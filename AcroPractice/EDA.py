@@ -13,13 +13,15 @@ df = pd.read_csv("weather_data.csv")
 # print(df.head())
 # print(df.tail())
 
-print(df.duplicated())
+# print(df.duplicated())
 # print(df.drop_duplicates())
 
-print(df.loc[df.duplicated()])
+# print(df.loc[df.duplicated()])
 
-df.drop_duplicates(ignore_index=True, inplace=True)
-print(df.shape)
+# df.drop_duplicates(ignore_index=True, inplace=True)
+# print(df.shape)
+
+print(df['Month'].unique())
 
 
 
