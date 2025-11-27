@@ -303,6 +303,10 @@ df = pd.DataFrame(data)
 # Writing DataFrame to 'cities.csv'
 df.to_csv('cities.csv', index=False)
 
+
+
+print(df.shape)
+
 print("Data has been written to cities.csv using pandas")
 
 # Initialize arrays to store the data
