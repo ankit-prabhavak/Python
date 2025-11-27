@@ -137,3 +137,10 @@ filtered_df = df[df['Wind'] > 10]
 correlation = filtered_df['Ozone'].corr(filtered_df['Solar.R'])
 
 print("Correlation between Ozone and Solar.R for Wind > 10:", correlation)
+
+
+'''
+Q: What is the average temperature during the month of June when the weather is cloudy ?
+'''
+
+
