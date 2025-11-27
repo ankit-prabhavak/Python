@@ -72,6 +72,7 @@ get_student_details(student_id_to_lookup)
 
 # Write a program to print fibonaci series upto a user defined limit.
 '''
+# There are other ways to do this. We can also use the recursive approach!
 def fibonacii(n):
     a = 0
     b = 1
