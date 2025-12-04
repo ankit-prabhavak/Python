@@ -144,3 +144,64 @@ Q: What is the average temperature during the month of June when the weather is 
 '''
 
 
+'''
+Given a list of movies and their budgets, write a code to find the average budget of the movies and print the over budget/under budget for each movie.
+'''
+
+movies = [
+    ("KGF", 100),
+    ("RRR", 550),
+    ("Kalki", 600),
+    ("Pursuit of Happiness", 400),
+    ("Javan", 300),
+    ("Bahubali", 250),
+    ("Pushpa", 200),
+]
+
+total_budget = 0 # Initialize total budget
+print("Welcome to python test")
+
+for movie in movies:
+    total_budget += movie[1]  # Add the budget of each movie
+
+average_budget = total_budget / len(movies)  # Calculate average budget
+print("Average Budget of Movies:", average_budget)
+
+for movie in movies:
+    over_budget = movie[1] - average_budget
+    print(f"Movie: {movie[0]}, Over/Under Budget: {over_budget}")
+
+print("Thank you\n")
+
+
+'''
+Given a csv file of the above dataset, read a data from the file and load the data in the diab dataframe
+'''
+import numpy as np
+import pandas as pd
+
+diab = pd.read_csv("weather_data.csv")
+
+# Check whether the dataset is balanced or not based on the "Weather" column
+weather_counts = diab['Weather'].value_counts()
+# diab.value_counts('Weather')
+
+# Extract the features and labels from the dataset and convert the data into numpy arrays to build dataframe
+
+features = diab.iloc[:, diab.columns != 'Weather'].values
+labels = diab.iloc[:, diab.columns == 'Weather'].values
+
+
+#  check for missing values and features in the dataset
+missing_values = diab.isnull().sum()
+num_features = diab.shape[1]
+
+# drop the missing values from the dataset
+diab.dropna(inplace=True)
+
+# Find the dummy variables for the categorical features in the dataset
+diab_dummies = pd.get_dummies(diab, drop_first=True)
+
+'''
+
+'''
